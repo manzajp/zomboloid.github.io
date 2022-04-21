@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Member Detail: </title>
+    <title>Member Detail: Manza</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
@@ -48,6 +49,7 @@
             padding: 10px;
             margin: 5px 2px;
             background-color: var(--nord9);
+            display: flex;
         }
 
         .card-nav .card-button i{
@@ -71,6 +73,7 @@
             grid-column: 5/6;
             display: flex;
             justify-content: center;
+            border: none;
         }
 
         .card-nav a{
@@ -138,13 +141,13 @@
             grid-column-start: span 3;
         }
 
-        .project{
-            /* margin-left: 15px !important; */
-            font-size: 15px;
-            color: white !important;
-            background-color: #4177cc !important;
-            width: 150%;
-            border-radius: 10px;
+        .card-drop-content{
+            color: var(--nord6);
+            display: flex;
+        }
+
+        .card-drop-content i {
+            padding-right: 15px;
         }
 
         .dropdown-content {
@@ -152,9 +155,7 @@
         }
         
         .dropdown-content a{
-            color: black;
             text-decoration: none;
-            display: block;
         }
 
         .show{
@@ -165,9 +166,6 @@
             cursor: pointer;
         }
 
-        .button-drop{
-            border: none;
-        }
     </style>
 </head>
 <body>
@@ -180,25 +178,22 @@
 
             <a href="../index.html"><div class="card card-button">MAIN</div></a>
             <div class="card-button-combo">
-                <a class="card-button-combo card-button card-button-3x" href="#about-us">ABOUT US</a>
-                <button class="card-button-combo card-button card-button-1x button-drop" href="#about-us-more" onclick="drop()"><i class="fa-solid fa-angle-down"></i></button>
-
-                <div class="dropdown-content" id="drop">
-                    <a href="#adam" class="card-button card-button-drop project"> <i class="fas fa-user-alt"></i>&nbsp&nbspAdam</a>
-                    <a href="#hasif" class="card-button card-button-drop project"><i class="fas fa-user-alt"></i>&nbsp&nbspHasif</a>
-                    <a href="manza.html" class="card-button card-button-drop project"><i class="fas fa-user-alt"></i>&nbsp&nbspManza</a>
-                    <a href="#tahmid" class="card-button card-button-drop project"><i class="fas fa-user-alt"></i>&nbsp&nbspTahmid</a>
-                </div>
+                <a class="card-button-combo card-button card-button-3x" href="../about-us/about-us.html">ABOUT US</a>
+                <button class="card-button-combo card-button card-button-1x" href="#about-us-more" onclick="drop()"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+            <div class="dropdown-content" id="drop">
+                <a href="adam.html" class="card card-button card-drop-content"><i class="fas fa-user-alt"></i>Adam</a>
+                <a href="hasif.html" class="card card-button card-drop-content"><i class="fas fa-user-alt"></i>Hasif</a>
+                <a href="manza.html" class="card card-button card-drop-content"><i class="fas fa-user-alt"></i>Manza</a>
+                <a href="tahmid.html" class="card card-button card-drop-content"><i class="fas fa-user-alt"></i>Tahmid</a>
             </div>
             <div class="card-button-combo">
                 <a class="card-button-combo card-button card-button-3x" href="#projects">PROJECTS</a>
-                <!-- <a class="card-button-combo card-button card-button-1x" href="#projects-more"><i class="fa-solid fa-angle-down"></i></a> -->
-                <button class="card-button-combo card-button card-button-1x button-drop" href="#projects-more" onclick="dropProject()"><i class="fa-solid fa-angle-down"></i></button>
-
-                <div class="dropdown-content" id="drop-project">
-                    <a href="#project1" class="card-button card-button-drop project">Project 1</a>
-                    <a href="#project2" class="card-button card-button-drop project">Project 2</a>
-                </div>
+                <button class="card-button-combo card-button card-button-1x" href="#projects-more" onclick="dropProject()"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+            <div class="dropdown-content" id="drop-project">
+                <a href="#project1" class="card card-button card-drop-content"><i class="fa-solid fa-folder"></i>Project 1</a>
+                <a href="#project2" class="card card-button card-drop-content"><i class="fa-solid fa-folder"></i>Project 2</a>
             </div>
         </div>
         <div class="card card-1x">
