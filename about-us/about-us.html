@@ -1,12 +1,272 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Title here!</title>
-  </head>
-  <body>
-    <h1>Header here!</h1>
-    <p>Lorem ipsum chanting here!</p>
-    goto <a href="manza.html">manza</a>
-    <p>Testing here!</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap');
+        @import "../assets/nord.css";
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: var(--nord1);
+            color: var(--nord8);
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            max-width: 1000px;
+            padding: 75px 0;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(2,1fr);
+        }
+        .card {
+            background: var(--nord9);
+            color: var(--nord6);
+            border-radius: 10px;
+            margin: 5px 5px;
+            padding: 25px;
+        }
+
+        .card-nav {
+            position: relative;
+            display: inline-block;
+            background-color: var(--nord10);
+            grid-column: 0/1;
+            grid-row: 1/3;
+        }
+        
+        .card-nav .card-button{
+            padding: 10px;
+            margin: 5px 2px;
+            background-color: var(--nord9);
+        }
+
+        .card-nav .card-button i{
+            margin: 2px 0px;
+        }
+
+        .card-nav .card-button-combo{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            color: var(--nord6);
+        }
+
+        .card-button-combo .card-button-3x{
+            border-radius: 10px 0px 0px 10px;
+            grid-column: 1 / 5;
+            display: flex;
+        }
+
+        .card-button-combo .card-button-1x{
+            border-radius: 0px 10px 10px 0px;
+            grid-column: 5/6;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card-nav a{
+            text-decoration: none;
+            font-weight: normal;
+            color: var(--nord6);
+        }
+
+        .card-nav .card-profile {
+            padding: 25px;
+            margin: 0px 2px 25px 2px;
+            background-color: var(--nord1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--nord8);
+        }
+
+        .card-nav .card-profile i{
+            padding: 25px;
+            margin: 10px 0px;
+            border-radius: 50%;
+            border: 1px solid var(--nord6);
+        }
+        
+        .user-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .user-container a{
+            text-decoration: none;
+        }
+
+        .card-1x {
+            background-color: var(--nord11);
+            /* grid-column: 2/3; */
+            grid-column-start: span 1;
+            color: var(--nord6);
+        }
+
+        .card-1x .card-header {
+            display: flex;
+            flex-direction: column;
+            justify-items:center;
+            margin: 10px;
+            padding: 10px 0px;
+        }
+
+        .card-1x .card-header img {
+            width: 100px;
+            border-radius: 50%;
+            /* border: 5px solid var(--nord1); */
+            box-shadow: 3px 3px 0px 2px var(--nord3);
+        }
+
+        .card-1x .card-header h3 {
+            font-size: 18px;
+        }
+
+        .card-1x .card-header h4 {
+            opacity: 50%;
+        }
+
+        .card-2x {
+            background-color: var(--nord12);
+            /* grid-column: 3/5; */
+            grid-column-start: span 4;
+            text-align: center;
+        }
+
+        .project{
+            /* margin-left: 15px !important; */
+            font-size: 15px;
+            color: white !important;
+            background-color: #4177cc !important;
+            width: 150%;
+            border-radius: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+        }
+        
+        .dropdown-content a{
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+
+        .show{
+            display:block;
+        }
+
+        button{
+            cursor: pointer;
+        }
+
+        .button-drop{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card card-nav">
+            <div class="card card-profile">
+                <i class="fa-solid fa-bacterium fa-2x"></i>
+                ZOMBOLOID
+            </div>
+
+            <a href="../index.html"><div class="card card-button">MAIN</div></a>
+            <div class="card-button-combo">
+                <a class="card-button-combo card-button card-button-3x" href="#about-us">ABOUT US</a>
+                <button class="card-button-combo card-button card-button-1x button-drop" href="#about-us-more" onclick="drop()"><i class="fa-solid fa-angle-down"></i></button>
+
+                <div class="dropdown-content" id="drop">
+                    <a href="#adam" class="card-button card-button-drop project"> <i class="fas fa-user-alt"></i>&nbsp&nbspAdam</a>
+                    <a href="#hasif" class="card-button card-button-drop project"><i class="fas fa-user-alt"></i>&nbsp&nbspHasif</a>
+                    <a href="manza.html" class="card-button card-button-drop project"><i class="fas fa-user-alt"></i>&nbsp&nbspManza</a>
+                    <a href="#tahmid" class="card-button card-button-drop project"><i class="fas fa-user-alt"></i>&nbsp&nbspTahmid</a>
+                </div>
+            </div>
+            <div class="card-button-combo">
+                <a class="card-button-combo card-button card-button-3x" href="#projects">PROJECTS</a>
+                <!-- <a class="card-button-combo card-button card-button-1x" href="#projects-more"><i class="fa-solid fa-angle-down"></i></a> -->
+                <button class="card-button-combo card-button card-button-1x button-drop" href="#projects-more" onclick="dropProject()"><i class="fa-solid fa-angle-down"></i></button>
+
+                <div class="dropdown-content" id="drop-project">
+                    <a href="#project1" class="card-button card-button-drop project">Project 1</a>
+                    <a href="#project2" class="card-button card-button-drop project">Project 2</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-2x">
+          <h1>ZOMBOLOID</h1><br>
+          We're a committed group with a clear goal in mind.We believe that there is an amazing amount to be leamed by working in a "real-world" web production environment, alongside other like-minded teens. In September of 2019, we started bringing individuals together with this in mind. From then, the group swiftly grew to nine members, and the name "Zomboloid" was chosen. We identified four strong, loyal members who are still in the group today after a tough start.
+          
+        </div>
+        <div class="user-container">
+          <a href="manza.html">
+            <div class="card card-1x">
+                <header class="card-header">
+                    <img src="../assets/images/p1.jpg" alt="">
+                    <div class="card-header card-title">
+                        <h3>MANZA</h3>
+                        <h4>Project Manager</h4>
+                    </div>
+                </header>
+            </div>
+          </a>
+          <a href="hasif.html">
+            <div class="card card-1x">
+              <header class="card-header">
+                  <img src="../assets/images/p2.png" alt="">
+                  <div class="card-header card-title">
+                      <h3>HASIF</h3>
+                      <h4>Head Developer</h4>
+                  </div>
+              </header>
+            </div>
+          </a>
+          <a href="adam.html">
+            <div class="card card-1x">
+              <header class="card-header">
+                  <img src="../assets/images/p3.jpeg" alt="">
+                  <div class="card-header card-title">
+                      <h3>ADAM</h3>
+                      <h4>Product Owner</h4>
+                  </div>
+              </header>
+            </div>
+          </a>
+          <a href="tahmid.html">
+            <div class="card card-1x">
+            <header class="card-header">
+                <img src="../assets/images/p4.png" alt="">
+                <div class="card-header card-title">
+                    <h3>TAHMID</h3>
+                    <h4>Tech Lead</h4>
+                </div>
+            </header>
+            </div>
+          </a>
+        </div>
+    </div>
+</body>
+<script>
+    function drop(){
+        document.getElementById('drop').classList.toggle('show');
+    }
+
+    function dropProject(){
+        document.getElementById('drop-project').classList.toggle('show');
+    }
+</script>
 </html>
