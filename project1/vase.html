@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vase</title>
+
+    <script src="https://kit.fontawesome.com/b01391234d.js" crossorigin="anonymous"></script>
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,600&family=Righteous&display=swap');
+
+        body
+        {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 60em;
+            background: url('../assets/images/bg-vase.jpg') no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .content
+        {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            grid-template-columns: 25fr 20fr 20fr 20fr 5fr;
+            grid-template-rows: 10fr 30fr 30fr 10fr 10fr;
+        }
+
+        .kiri
+        {
+            opacity: 60%;
+            grid-row: 1 / 6;
+            grid-column: 1 / 2;
+            background-image: linear-gradient(to right, rgb(104, 0, 0), rgb(32, 0, 32));
+            padding-right: 30px;
+            padding-left: 60px;
+        }
+
+        .kanan-atas{
+            grid-row: 2/3;
+            grid-column: 4/5;
+            width: 80%;
+            /* background-color: rgba(0,0,0, 0.4); */
+            padding: 10px;
+        }
+
+        .kanan-bawah
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px 60px;
+            opacity: 60%;
+            grid-row: 4 / 6;
+            grid-column: 2 / 5;
+            background-color: rgba(0,0,0, 0.4);
+        }
+
+        .trailer-button{
+            grid-row: 3/4;
+            grid-column: 4/5;
+        }
+
+        .atas
+        {
+            padding-top: 60px;
+        }
+
+        .kiri-bawah
+        {
+            padding-top: 105%;
+            padding-right: 100px;
+        }
+
+        .garis-kanan
+        {
+            grid-row: 1 / 2;
+            grid-column: 5 / 6;
+            background-color: rgba(204,204,204,0.3);  
+        }
+
+        .batang-kanan
+        {
+            grid-row: 2 / 4;
+            grid-column: 5 / 6;
+            border: solid #ccc 2px;
+            opacity: 30%;
+        }
+
+        .arrow-atas-kanan
+        {
+            grid-row: 4 / 5;
+            grid-column: 5 / 6;
+            background-color: rgba(204,204,204,0.3);
+        }
+
+        .arrow-bawah-kanan
+        {
+            grid-row: 5 / 6;
+            grid-column: 5 / 6;
+            background-color: rgba(204,204,204,0.2);
+        }
+
+        .kanan-atas img{
+            border-radius: 50%;
+            width: 20%;
+        }
+
+        pre
+        {
+            position: absolute;
+            font-size: 150px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            color: #ccc;
+            padding-left: 15%;
+            margin-top: -10px;
+        }
+
+        h1
+        {
+            position: absolute;
+            font-size: 150px;
+            font-weight: lighter;
+            font-family: 'Montserrat', sans-serif;
+            color: #ccc;
+            margin-left: -10px;
+            margin-top: 10px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            opacity: 60%;
+        }
+
+        .kanan-atas h2{
+           color: white; 
+        }
+
+        h2
+        {
+            font-size: 20px;
+            color: rgb(66, 203, 248);
+        }
+
+        p
+        {
+            font-size: 15px;
+            color: white;
+        }
+
+        .kanan-atas hr{
+            height: 5px;
+            background-color: #ccc;
+            border: none;
+        }
+
+        hr
+        {
+            height: 8px;
+            background-color: #ccc;
+            border: none;
+        }
+
+        .trailer-button .btn a{
+            float: left;
+            background-color: rgba(204,204,204,0.3);
+        }
+
+        .btn a
+        {
+            float: right;
+            padding: 16px 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 20px;
+            background: rgba(0,0,0,0);
+            color: white;
+            border-radius: 50px;
+            border: 1px solid white;
+            text-decoration: none !important;
+            transition: .3s;
+        }
+
+        .btn a:hover
+        {
+            transition: .3s;
+            background: white;
+            color: black;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .item
+        {
+            margin: 10px;
+        }
+
+        .icon{
+            text-align: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <div class="kiri">
+            <div class="atas">
+                <h2>Short Film</h2>
+                <hr>
+            </div>
+            <div class="tengah">
+                <pre>
+THE
+VASE
+                </pre>
+                <h1>spectral</h1>
+            </div>
+            <div class="kiri-bawah">
+                <h2>Brief</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, minus? Et vel, animi cum provident aspernatur veniam laudantium odit exercitationem nostrum ipsa quibusdam voluptatibus aliquam reprehenderit voluptas natus recusandae expedita.</p>
+                <br><br>
+                <div class="btn"><a href="#"> Discover </a></div>
+            </div>
+        </div>
+        <div class="kanan-atas">
+            <img src="../assets/images/profile.jpg" alt="Director">
+            <h2>Director</h2>
+            <hr>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ullam cum voluptas quibusdam quam dicta porro, perferendis fugiat aperiam libero nulla rerum commodi in quas optio nobis! Labore, nemo obcaecati.</p>
+        </div>
+        <div class="trailer-button">
+            <div class="btn"><a href="#"> Watch Trailer </a></div>
+        </div>
+        <div class="kanan-bawah">
+            <div class="item">
+                <h2>Photography</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, minus? Et vel.</p>
+            </div>
+            <div class="item">
+                <h2>Sound</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, minus? Et vel.</p>
+            </div>
+            <div class="item">
+                <h2>Graphics</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, minus? Et vel.</p>
+            </div>
+        </div>
+        <div class="garis-kanan">
+            <div class="icon">
+                <i class='fas fa-align-justify' style='font-size:48px;color:white;opacity: 0.6;'></i>
+            </div>
+        </div>
+        <div class="batang-kanan"></div>
+        <div class="arrow-atas-kanan">
+            <div class="icon">
+                <i class='fas fa-chevron-right' style='font-size:50px;color:white;opacity: 0.6'></i>
+            </div>
+        </div>
+        <div class="arrow-bawah-kanan">
+            <div class="icon">
+                <i class='fas fa-chevron-left' style='font-size:50px;color:white;opacity: 0.6;'></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
